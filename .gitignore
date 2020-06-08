@@ -1,0 +1,7 @@
+#git ignore
+/node_modules
+/public
+/app/config/development.json
+
+#dev.json
+app/config/development.json
