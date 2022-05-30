@@ -25,6 +25,8 @@ $ cd lms-backend-api
 $ npm install
 $ npm run start
 ```
+### Database collections for dev setup
+https://1drv.ms/u/s!AtuFwKw_48h8qUm0OLgfTB264g2p?e=dx2X2w
 
 ## Live Demo
 
