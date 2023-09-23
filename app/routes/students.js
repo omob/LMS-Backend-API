@@ -205,13 +205,16 @@ router
       if (req.body.telephone) student.telephone = req.body.telephone;
       if (req.body.sex) student.sex = req.body.sex;
       if (req.body.nationality) student.nationality = req.body.nationality;
-      if (req.body.stateOfOrigin)
+      if (req.body.stateOfOrigin) {
         student.stateOfOrigin = req.body.stateOfOrigin;
+      }
       if (req.body.localGov) student.localGov = req.body.localGov;
-      if (req.body.address_current)
+      if (req.body.address_current) {
         student.address_current = req.body.address_current;
-      if (req.body.address_permanent)
+      }
+      if (req.body.address_permanent) {
         student.address_permanent = req.body.address_permanent;
+      }
       if (req.body.dob) student.dob = req.body.dob;
       if (req.body.sponsor) student.sponsor = req.body.sponsor;
       if (req.body.nextOfKin) student.nextOfKin = req.body.nextOfKin;
@@ -258,8 +261,9 @@ router
           },
         })
         .exec((err, studcourses) => {
-          if (err)
+          if (err) {
             return res.json({ success: false, message: `Error: ${err}` });
+          }
 
           if (!studcourses[0]) {
             return res.json({
@@ -439,8 +443,9 @@ router.get("/courses/:id", (req, res) => {
     .exec((err, course) => {
       if (err) return res.json({ success: false, message: "Unsuccessful" });
 
-      if (!course)
+      if (!course) {
         return res.json({ success: false, message: "Course does not exist" });
+      }
 
       return res.json({ success: true, message: "Successful", data: course });
     });
@@ -452,14 +457,16 @@ router
     upload(req, res, (err) => {
       if (err) return res.json({ success: false, message: err });
 
-      if (req.file === undefined)
+      if (req.file === undefined) {
         return res.json({ success: false, message: "No file uploaded" });
+      }
 
       // save file to db here
       return StudentModel.findById(req.decoded.user._id, (err, student) => {
         if (err) return res.json({ success: false, message: err });
-        if (!student)
+        if (!student) {
           return res.json({ success: false, message: "student not found" });
+        }
 
         student.documents.push({
           docName: req.body.docName,
