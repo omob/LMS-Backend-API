@@ -1,7 +1,7 @@
 const Mongoose = require("mongoose");
 const config = require("../config");
 
-const options = { useNewUrlParser: true };
+const options = { useNewUrlParser: true, useUnifiedTopology: true };
 
 Mongoose.connect(config.dbURI, options).then(
   () => console.log("Connection established!..."),

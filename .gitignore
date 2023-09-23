@@ -5,3 +5,4 @@
 
 #dev.json
 app/config/development.json
+.env
