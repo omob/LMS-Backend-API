@@ -26,7 +26,7 @@ $ npm install
 $ npm run start
 ```
 ### Database collections for dev setup
-https://1drv.ms/u/s!AtuFwKw_48h8qUm0OLgfTB264g2p?e=dx2X2w
+https://1drv.ms/f/c/7cc8e33facc085db/EtuFwKw_48gggHzJFAAAAAABLvhv13JGfX97f0sF6zVhWA?e=vvsCpK
 
 ## Live Demo
 
